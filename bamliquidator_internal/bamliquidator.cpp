@@ -202,7 +202,7 @@ std::vector<double> liquidate(const samfile_t* fp, const bam_index_t* bamidx,
   for(int i=0; i<spnum; i++)
   {
     startArr[i] = start + pieceLength*i;
-    stopArr[i] = starArr[i]t + pieceLength -1 ;
+    stopArr[i] = startArr[i] + pieceLength -1;
   }
 
   std::deque<ReadItem> items = bamQuery_region(fp,bamidx,coord,strand,extendlen);
